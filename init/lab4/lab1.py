@@ -4,14 +4,7 @@ class MyName:
     total_names = 0 #Class Variable
 
     def __init__(self, name=None) -> None:
-         """Індивідуальне завдання: перевірка імені та велика перша літера"""
-        if name is not None:
-            # Перевірка чи ім'я містить тільки літери
-            if not name.replace(" ", "").isalpha():
-                raise ValueError("Ім'я може містити лише літери!")
-            # Робимо першу літеру великою
-            name = name.capitalize()
-            """Ініціалізація класу
+        """Ініціалізація класу
         """
         self.name = name if name is not None else self.anonymous_user().name #Class attributes / Instance variables
         MyName.total_names += 1 #modify class variable
